@@ -1,0 +1,240 @@
+/* ==========================================================================
+   CSS BÁSICO INICIAL - LABORATÓRIO DE POSICIONAMENTO E Z-INDEX
+   Apenas cores, fontes e tamanhos básicos de texto.
+   TODO O POSICIONAMENTO (relative, absolute, fixed, sticky) É COM VOCÊ!
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  margin: 0;
+  padding: 0;
+  min-height: 2200px; /* Altura para testar a rolagem da página */
+}
+
+/* --------------------------------------------------------------------------
+   1. CABEÇALHO / HUD
+   (Desafio: Deixar preso no topo ao rolar a página com position: sticky)
+   -------------------------------------------------------------------------- */
+.hud-superior {
+  background-color: #1e293b;
+  border-bottom: 2px solid #334155;
+  padding: 15px 20px;
+  color: #38bdf8;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.hud-titulo {
+  font-size: 18px;
+  margin: 0 0 5px 0;
+  letter-spacing: 0.1rem;
+  
+}
+
+.hud-status-servidor {
+  position: absolute;
+  right: 3%;
+  top: 50%;
+  transform: translate(-3%, -50%);
+  font-size: 12px;
+  color: #4ade80;
+  border: 1px solid #4ade80;
+  border-radius: 1rem;
+  padding: 0.4rem;
+  background-color: #022c22;
+  
+}
+
+/* --------------------------------------------------------------------------
+   2. CONTEÚDO PRINCIPAL
+   -------------------------------------------------------------------------- */
+.container-arena {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.titulo-secao {
+  font-size: 24px;
+  margin: 0 0 8px 0;
+  text-align: center;
+}
+
+.descricao-secao {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   3. CARDS DE CAMPEÕES
+   (Desafio: Tornar cada card a referência de posicionamento para seus filhos)
+   -------------------------------------------------------------------------- */
+.card-campeao {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  margin-bottom: 30px;
+  padding: 15px;
+  width: 320px;
+  position: relative;
+  display: inline-block;
+  left: 20rem;
+  border-radius: 1.2rem;
+  margin-right: 2rem;
+}
+
+.img-personagem {
+  width: 100%;
+  height: 180px;
+  display: block;
+  border: 1px solid #334155;
+  border-radius: 0.3rem;
+}
+
+.nome-personagem {
+  font-size: 18px;
+  color: #f8fafc;
+  margin: 12px 0 4px 0;
+}
+
+.classe-personagem {
+  font-size: 13px;
+  color: #38bdf8;
+  margin: 0 0 8px 0;
+  font-weight: 700;
+}
+
+.detalhes-personagem {
+  font-size: 13px;
+  color: #94a3b8;
+  line-height: 1.4;
+  margin: 0 0 15px 0;
+  font-weight: 300;
+}
+
+.btn-acao {
+  padding: 10px 16px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  font-weight: 800;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  width: 100%;
+ 
+}
+
+#btn-bloqueado {
+  background-color: #3d4044;
+  font-weight: 800;
+  padding: 0.5rem;
+  color: #bec5ce;
+  border-radius: 0.3rem;
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   4. BADGES E TAGS
+   (Desafio: Desacoplar do fluxo com position: absolute sobre a imagem)
+   -------------------------------------------------------------------------- */
+
+
+.tag-status {
+  background-color: #16a34a;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 8px;
+  position: absolute;
+  top: 35%;
+  left: 7%;
+  z-index: 3;
+  border-radius: 0.2rem;
+  font-weight: bolder ;
+  /* TODO: Aplique position: absolute, top (ex: 122px), left (ex: 26px) e z-index aqui */
+}
+
+/* --------------------------------------------------------------------------
+   5. BOTÃO DE CHAT
+   (Desafio: Fixar no canto inferior direito da tela com position: fixed)
+   -------------------------------------------------------------------------- */
+.btn-chat-squad {
+  background-color: #10b981;
+  color: #022c22;
+  border: none;
+  padding: 12px 20px;
+  font-weight: 800;
+  cursor: pointer;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9;
+  border-radius: 0.8rem;
+  /* TODO: Aplique position: fixed, bottom, right e z-index aqui */
+}
+
+
+#badge-lendario {
+  background-color: #ea580c;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 8px;
+  position: absolute;
+  top: 26px;
+  right: 26px;
+  z-index: 2;
+  border-radius: 0.3rem;
+
+}
+
+#badge-raro {
+  background-color: #00b2fe;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 8px;
+  position: absolute;
+  top: 26px;
+  right: 26px;
+  z-index: 2;
+  border-radius: 0.3rem;
+
+}
+
+#badge-epico {
+  background-color: #8F00FF;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 8px;
+  position: absolute;
+  top: 26px;
+  right: 26px;
+  z-index: 2;
+  border-radius: 0.3rem;
+}
+
+  #tag-bloqueado {
+  background-color: #ff0000;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 8px;
+  position: absolute;
+  top: 122px;
+  left: 26px;
+  z-index: 3;
+  border-radius: 0.2rem;
+  font-weight: bolder ;
+
+
+  }
